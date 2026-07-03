@@ -5,9 +5,9 @@ ASCII is a 7-bit encoding standard which allows the representation of text using
 
 Using the given integer array, convert each number into its corresponding ASCII character to obtain the flag.
 
-[99, 114, 121, 112, 116, 111, 123, 65, 83, 67, 73, 73, 95, 112, 114, 49, 110, 116, 52, 98, 108, 51, 125]
+```[99, 114, 121, 112, 116, 111, 123, 65, 83, 67, 73, 73, 95, 112, 114, 49, 110, 116, 52, 98, 108, 51, 125]```
 
-In Python, the chr() function can be used to convert an ASCII ordinal number to a character (the ord() function does the opposite).
+In Python, the `chr()` function can be used to convert an ASCII ordinal number to a character (the `ord()` function does the opposite).
 ---
 
 ### Solve
@@ -18,6 +18,7 @@ The hint suggested using Python's `chr()` function, which converts an ASCII (or 
 
 I stored the given integer array in a Python list and iterated through each value, converting it into a character using `chr()`. Each character was appended to a string to reconstruct the original message.
 
+Python Code:
 ```python
 ASCII_code = [99, 114, 121, 112, 116, 111, 123, 65, 83, 67, 73, 73, 95, 112, 114, 49, 110, 116, 52, 98, 108, 51, 125]
 
