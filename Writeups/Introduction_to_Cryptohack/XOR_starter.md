@@ -1,0 +1,59 @@
+# XOR Starter
+
+**Challenge Description:**  
+XOR is a bitwise operator which returns 0 if the bits are the same, and 1 otherwise. In textbooks the XOR operator is denoted by ⊕, but in most challenges and programming languages you will see the caret ^ used instead.
+
+For longer binary numbers we XOR bit by bit: `0110 ^ 1010 = 1100`. We can XOR integers by first converting the integer from decimal to binary. We can XOR strings by first converting each character to the integer representing the Unicode character.
+
+Given the string `label`, XOR each character with the integer `13`. Convert these integers back to a string and submit the flag as crypto`{new_string}`.
+
+The Python pwntools library has a convenient xor() function that can XOR together data of different types and lengths. But first, you may want to implement your own function to solve this.
+
+---
+
+### Solve
+
+The challenge required XORing each character of the string with the integer `13`.
+
+To achieve this, I iterated through each character of the string, converted it into its ASCII value using `ord()`, XORed it with `13` using the `^` operator, and then converted the result back into a character using `chr()`.
+
+Each decoded character was appended to a string, and finally formatted as the flag.
+
+Python Code:
+
+```python
+text = "label"
+
+flag = ""
+
+for i in text:
+    flag += chr(ord(i) ^ 13)
+
+print("crypto{" + flag + "}")
+```
+
+Output:
+
+```text
+crypto{aloha}
+```
+
+This produced the correct flag.
+
+**Flag:**
+
+```text
+crypto{aloha}
+```
+
+---
+
+### New Learnings
+
+- **XOR (Exclusive OR)** is a bitwise operation that returns `1` if two bits are different and `0` if they are the same.
+- In Python, the `^` operator performs a bitwise XOR operation.
+- XOR is commonly used in cryptography because applying the same XOR operation twice with the same key restores the original value.
+- The `ord()` function converts a character into its ASCII/Unicode integer value.
+- The `chr()` function converts an integer back into its corresponding character.
+- XORing strings is performed by converting each character to its integer representation, applying the XOR operation, and converting the result back into a character.
+- XOR is one of the most fundamental operations used in cryptography, stream ciphers, encryption algorithms, and many CTF challenges.
