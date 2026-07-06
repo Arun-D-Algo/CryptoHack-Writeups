@@ -10,6 +10,7 @@ The purpose of these writeups is to document my learning journey through cryptog
 - Python scripts and code used during challenges
 - Tools, commands, and techniques used
 - Key learnings and takeaways from each challenge
+- Note: You will find the dedicated python3 codes under `CryptoHack_Python_codes` and the writeups under `Writeups`.
 
 ## Purpose
 This repository exists to:
