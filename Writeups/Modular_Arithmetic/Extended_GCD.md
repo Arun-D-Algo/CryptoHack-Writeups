@@ -48,8 +48,8 @@ def extended_gcd(a, b):
     return gcd, x, y
 
 
-p = 26513
-q = 32321
+p = int(input("Enter first number : "))
+q = int(input("Enter second number : "))
 
 gcd, u, v = extended_gcd(p, q)
 
